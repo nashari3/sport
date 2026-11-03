@@ -408,7 +408,7 @@ details summary {
 
 .drawer-trigger {
     position: fixed; /* قمنا بتغييرها إلى fixed ليبقى في مكان ثابت على الشاشة */
-    top: 13%; /* 🌟 تم رفعه للربع العلوي ليبقى بعيداً تماماً عن أسماء الأيام والـ Accordion */
+    top: 11%; /* 🌟 تم رفعه للربع العلوي ليبقى بعيداً تماماً عن أسماء الأيام والـ Accordion */
     right: 0; /* تم تثبيته على الطرف الأيمن مباشرة */
     transform: rotate(-90deg) translate(0, -100%); /* تعديل التدوير ليلتصق بالطرف بشكل مثالي */
     transform-origin: top right;
