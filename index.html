@@ -2344,3 +2344,85 @@
                 
             </div>
         </details>
+</section>
+<!-- ======================================================== -->
+<!-- القائمة الجانبية الذكية للصور الكاملة والتكبير -->
+<!-- ======================================================== -->
+<div id="side-drawer" class="side-drawer">
+    <!-- الزر الجانبي اللطيف الثابت على طرف الشاشة -->
+    <button class="drawer-trigger" onclick="toggleDrawer()">
+        <span class="trigger-icon">⭐</span>
+        <span class="trigger-text">تمارين تكميلية</span>
+    </button>
+
+    <!-- محتوى القائمة الجانبية الداخلي -->
+    <div class="drawer-content">
+        <div class="drawer-header">
+            <h2>دليلك المصوّر 🌸</h2>
+            <button class="close-btn" onclick="toggleDrawer()">✕</button>
+        </div>
+
+        <div class="drawer-body">
+            
+            <!-- 1. صورة الإحماء الكاملة -->
+            <div class="drawer-section">
+                <h3>🏃‍♀️ دليل تمارين الإحماء</h3>
+                <div class="drawer-full-image-container" onclick="openLightbox('warmup-all.jpg', 'دليل تمارين الإحماء الكامل')">
+                    <img src="00.jpg" alt="الإحماء" class="drawer-full-img">
+                </div>
+            </div>
+
+            <!-- 2. صورة الكور الكاملة -->
+            <div class="drawer-section">
+                <h3>⚡ دليل تمارين الكور والبطن</h3>
+                <div class="drawer-full-image-container" onclick="openLightbox('core-all.jpg', 'دليل تمارين الكور والبطن الكامل')">
+                    <img src="0.webp" alt="الكور" class="drawer-full-img">
+                </div>
+            </div>
+
+            <!-- 3. صورة الإطالات الكاملة -->
+            <div class="drawer-section">
+                <h3>🧘‍♀️ دليل تمارين الإطالات</h3>
+                <div class="drawer-full-image-container" onclick="openLightbox('stretching-all.jpg', 'دليل تمارين الإطالات الكامل')">
+                    <img src="000.jpg" alt="الإطالات" class="drawer-full-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- النافذة المنبثقة الشفافة لتكبير الصورة (Lightbox) -->
+<div id="lightbox-modal" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">✕</span>
+    <img class="lightbox-content" id="lightbox-img" alt="صورة مكبرة">
+    <div id="lightbox-caption"></div>
+</div>
+
+<!-- كود التشغيل (JavaScript) لفتح القائمة وتكبير الصور -->
+<script>
+    // دالة فتح وإغلاق القائمة الجانبية (على جنب)
+    function toggleDrawer() {
+        const drawer = document.getElementById('side-drawer');
+        drawer.classList.toggle('open');
+    }
+
+    // دالة تفعيل ظهور النافذة وتكبير الصورة بالكامل
+    function openLightbox(imageSrc, captionText) {
+        const modal = document.getElementById('lightbox-modal');
+        const modalImg = document.getElementById('lightbox-img');
+        const caption = document.getElementById('lightbox-caption');
+        
+        modal.style.display = "flex"; // إظهار النافذة بمنتصف الشاشة
+        modalImg.src = imageSrc;      // وضع رابط الصورة المطلوبة
+        caption.innerHTML = captionText; // وضع العنوان الخاص بالصورة
+    }
+
+    // دالة إغلاق النافذة المنبثقة والعودة للموقع
+    function closeLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        modal.style.display = "none"; // إخفاء النافذة تماماً
+    }
+</script>
+
+</body>
