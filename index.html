@@ -2407,16 +2407,6 @@
         drawer.classList.toggle('open');
     }
 
-    // دالة تفعيل ظهور النافذة وتكبير الصورة بالكامل
-    function openLightbox(imageSrc, captionText) {
-        const modal = document.getElementById('lightbox-modal');
-        const modalImg = document.getElementById('lightbox-img');
-        const caption = document.getElementById('lightbox-caption');
-        
-        modal.style.display = "flex"; // إظهار النافذة بمنتصف الشاشة
-        modalImg.src = imageSrc;      // وضع رابط الصورة المطلوبة
-        caption.innerHTML = captionText; // وضع العنوان الخاص بالصورة
-    }
 
     // دالة إغلاق النافذة المنبثقة والعودة للموقع
     function closeLightbox() {
