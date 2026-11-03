@@ -2392,21 +2392,63 @@
     </div>
 </div>
 
+<!-- ======================================================== -->
+<!-- القائمة الجانبية الذكية للصور الكاملة (بدون تكبير) -->
+<!-- ======================================================== -->
+<div id="side-drawer" class="side-drawer">
+    <!-- الزر الجانبي اللطيف الثابت على طرف الشاشة -->
+    <button class="drawer-trigger" onclick="toggleDrawer()">
+        <span class="trigger-icon">⭐</span>
+        <span class="trigger-text">تمارين تكميلية</span>
+    </button>
 
-<!-- كود التشغيل (JavaScript) لفتح القائمة وتكبير الصور -->
+    <!-- محتوى القائمة الجانبية الداخلي -->
+    <div class="drawer-content">
+        <div class="drawer-header">
+            <h2>دليلك المصوّر 🌸</h2>
+            <button class="close-btn" onclick="toggleDrawer()">✕</button>
+        </div>
+
+        <div class="drawer-body">
+            
+            <!-- 1. صورة الإحماء الكاملة -->
+            <div class="drawer-section">
+                <h3>🏃‍♀️ دليل تمارين الإحماء</h3>
+                <div class="drawer-full-image-container">
+                    <img src="warmup-all.jpg" alt="الإحماء" class="drawer-full-img">
+                </div>
+            </div>
+
+            <!-- 2. صورة الكور الكاملة -->
+            <div class="drawer-section">
+                <h3>⚡ دليل تمارين الكور والبطن</h3>
+                <div class="drawer-full-image-container">
+                    <img src="core-all.jpg" alt="الكور" class="drawer-full-img">
+                </div>
+            </div>
+
+            <!-- 3. صورة الإطالات الكاملة -->
+            <div class="drawer-section">
+                <h3>🧘‍♀️ دليل تمارين الإطالات</h3>
+                <div class="drawer-full-image-container">
+                    <img src="stretching-all.jpg" alt="الإطالات" class="drawer-full-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- كود التشغيل البسيط (JavaScript) لفتح وإغلاق القائمة الجانبية فقط -->
 <script>
     // دالة فتح وإغلاق القائمة الجانبية (على جنب)
     function toggleDrawer() {
         const drawer = document.getElementById('side-drawer');
         drawer.classList.toggle('open');
     }
-
-
-    // دالة إغلاق النافذة المنبثقة والعودة للموقع
-    function closeLightbox() {
-        const modal = document.getElementById('lightbox-modal');
-        modal.style.display = "none"; // إخفاء النافذة تماماً
-    }
 </script>
+
+</body>
+
 
 </body>
