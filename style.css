@@ -402,13 +402,16 @@ details summary {
     right: 0;
 }
 
-/* الشريط الجانبي اللطيف الثابت على طرف الشاشة الدائم */
+/* ======================================================== */
+/* الكود المعدل للشريط الجانبي لمنع تغطية أسماء الأيام */
+/* ======================================================== */
+
 .drawer-trigger {
-    position: absolute;
-    top: 50%;
-    left: -45px;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: left center;
+    position: fixed; /* قمنا بتغييرها إلى fixed ليبقى في مكان ثابت على الشاشة */
+    top: 25%; /* 🌟 تم رفعه للربع العلوي ليبقى بعيداً تماماً عن أسماء الأيام والـ Accordion */
+    right: 0; /* تم تثبيته على الطرف الأيمن مباشرة */
+    transform: rotate(-90deg) translate(0, -100%); /* تعديل التدوير ليلتصق بالطرف بشكل مثالي */
+    transform-origin: top right;
     background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
     color: #fff;
     border: none;
@@ -421,8 +424,10 @@ details summary {
     gap: 8px;
     font-weight: bold;
     white-space: nowrap;
+    z-index: 9998; /* يضمن ظهوره بشكل منسق دون التداخل مع محتوى الصفحة الأساسي */
 }
 
+/* باقي الأكواد كما هي بدون أي تغيير لضمان سلامة التصميم الداخلي */
 .drawer-trigger .trigger-icon {
     transform: rotate(90deg);
 }
@@ -458,7 +463,7 @@ details summary {
 
 .drawer-body {
     padding: 20px;
-    overflow-y: auto; /* تفعيل السكرول الداخلي إذا كانت الصور طويلة */
+    overflow-y: auto; 
     flex: 1;
 }
 
@@ -473,6 +478,7 @@ details summary {
     border-right: 3px solid #ff9a9e;
     padding-right: 8px;
 }
+
 
 /* حاويات برواز الصور في القائمة */
 .drawer-full-image-container {
