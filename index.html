@@ -10,6 +10,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- شاشة الافتتاحية بتركيب صورة البنت -->
+<div id="intro-splash" class="intro-overlay">
+    <div class="intro-content">
+        <!-- الشعاع الضوئي -->
+        <div class="energy-beam"></div>
+
+        <!-- حاوية تركيب صورة البنت -->
+        <div class="girl-assemble-box">
+            <!-- الجزء العلوي (الرأس) -->
+            <img src="girl.png" alt="" class="girl-piece piece-top">
+            <!-- الجزء الأوسط (الجذع والدمبل) -->
+            <img src="girl.png" alt="" class="girl-piece piece-mid">
+            <!-- الجزء السفلي (الأرجل) -->
+            <img src="girl.png" alt="" class="girl-piece piece-bot">
+        </div>
+
+        <h2 class="intro-title">فتنس تايم ✨</h2>
+        <p class="intro-subtitle">رحلتكِ نحو القوة والرشاقة تبدأ الآن</p>
+    </div>
+</div>
+
 
     <nav class="navbar">
         <div class="container">
@@ -50,13 +71,13 @@
                 desc: "الهدف: زيادة امتلاء المؤخرة وتقوية الفخذ الأمامي.",
                 isWarmup: true,
                 exercises: [
-                    { name: "Hip Thrust", target: "المؤخرة (Glutes)", sets: "3 × 10–12", id: "ex1",  video: "3.mp4" },
-                    { name: "Leg Press", target: "الفخذ الأمامي (Quads)", sets: "3 × 10–12", id: "ex2", video: "leg-press.mp4" },
-                    { name: "Leg Extension", target: "الفخذ الأمامي (Quads)", sets: "2 × 12–15", id: "ex3", image: "leg-extension.jpg", video: "leg-extension.mp4" },
-                    { name: "Hip Abduction", target: "المؤخرة الجانبية", sets: "2 × 15", id: "ex4", image: "hip-abduction.jpg", video: "hip-abduction.mp4" },
-                    { name: "Glute Kickback", target: "عضلات المؤخرة", sets: "2 × 12 لكل رجل", id: "ex5", image: "glute-kickback.jpg", video: "glute-kickback.mp4" },
-                    { name: "Reverse Lunge", target: "الأرجل والمؤخرة", sets: "2 × 8 لكل رجل", id: "ex6", image: "reverse-lunge.jpg", video: "reverse-lunge.mp4" },
-                    { name: "Seated Calf Raise", target: "عضلات الساق (السمانة)", sets: "2 × 12–15", id: "ex7", image: "calf-raise.jpg", video: "calf-raise.mp4" }
+                    { name: "Hip Thrust", target: "المؤخرة (Glutes)", sets: "3 × 10–12", id: "ex1",  video: "hip thrust.mp4" },
+                    { name: "Leg Press", target: "الفخذ الأمامي (Quads)", sets: "3 × 10–12", id: "ex2", video: "leg press.mp4" },
+                    { name: "Leg Extension", target: "الفخذ الأمامي (Quads)", sets: "2 × 12–15", id: "ex3", video: "leg exten.mp4" },
+                    { name: "Hip Abduction", target: "المؤخرة الجانبية", sets: "2 × 15", id: "ex4", video: "hip abduction.mp4" },
+                    { name: "Glute Kickback", target: "عضلات المؤخرة", sets: "2 × 12 لكل رجل", id: "ex5", video: "glute kickback.mp4" },
+                    { name: "Reverse Lunge", target: "الأرجل والمؤخرة", sets: "2 × 8 لكل رجل", id: "ex6", video: "reverse lunge.mp4" },
+                    { name: "Seated Calf Raise", target: "عضلات الساق (السمانة)", sets: "2 × 12–15", id: "ex7", video: "seated calf.mp4" }
                 ]
             },
             {
